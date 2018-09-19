@@ -1,0 +1,73 @@
+<mat-card class="mainContent">
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput placeholder="Search Insured Name or Policy Number">
+    </mat-form-field>
+  </div>
+  <mat-grid-list cols="4" rowHeight="900px">
+    <mat-grid-tile colspan="1" rowspan="1">
+      <mat-card class="side-dash">
+        <h3>I WANT TO</h3><br>
+        <button mat-button>
+          <mat-icon matPrefix>star_rate</mat-icon>
+          Start A New Quote
+        </button>
+        <button mat-button>
+          <mat-icon matPrefix>find_in_page</mat-icon>
+          View Online Quotes</button>
+        <button mat-button>
+          <mat-icon matPrefix>credit_card</mat-icon>
+          Make A Payment
+        </button>
+        <button mat-button>
+          <mat-icon matPrefix>touch_app</mat-icon>
+          Request an Endorsement
+        </button>
+        <button mat-button>
+          <mat-icon matPrefix>insert_drive_file</mat-icon>
+          Forms, Guidelines & Applications
+        </button>
+        <button mat-button>
+          <mat-icon matPrefix>search</mat-icon>
+          Report a Claim
+        </button>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="3" rowspan="1">
+      <mat-card class="dash">
+        <h2>POLICY DASHBOARD</h2>
+        <h3>welcome Corey Vollmer</h3>
+        <p>
+            Welcome to your agency dashboard - a centralized place where you can manage existing,
+            pending and new business quotes. The Connector with Ryan Specialty Group provides your
+            agency with access to multiple products, classes, and high quality insurance carriers.
+        </p>
+          <mat-expansion-panel [expanded]="true">
+              <mat-expansion-panel-header>
+                <mat-panel-title>RECENTLY VIEWED POLICIES</mat-panel-title>
+              </mat-expansion-panel-header>
+              <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                  <ng-container matColumnDef="policy">
+                    <th mat-header-cell *matHeaderCellDef>POLICY NO.</th>
+                    <td mat-cell *matCellDef="let element"> {{element.policy}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="insured">
+                    <th mat-header-cell *matHeaderCellDef>INSURED</th>
+                    <td mat-cell *matCellDef="let element"> {{element.insured}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="date">
+                    <th mat-header-cell *matHeaderCellDef>EFF. DATE</th>
+                    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="type">
+                    <th mat-header-cell *matHeaderCellDef>TYPE</th>
+                    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+                  </ng-container>
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </mat-expansion-panel>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>

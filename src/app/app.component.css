@@ -1,0 +1,10 @@
+body{
+    background: #006ab2;
+}
+
+mat-card.mainContent {
+    width:90%;
+    margin: 0 auto;
+    height:auto;
+    overflow:auto;
+}

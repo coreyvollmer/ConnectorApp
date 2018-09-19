@@ -1,0 +1,43 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  input{
+    width: 100%;
+  }
+
+mat-card.dash{
+  height:auto;
+  overflow:auto;
+  /* top:-70px; */
+  width: 90%;
+}
+
+mat-card.side-dash {
+    height:700px;
+    top:-70px;
+    width: 80%;
+    background:rgb(245, 245, 245);
+}
+
+button {
+  margin-left:-23px;
+}
+
+h2 {
+  color: #006ab2;
+}
+
+h3 {
+  color: #77bc43;
+}
+
+table {
+  width: 100%;
+}
+
